@@ -71,10 +71,10 @@ export default function Stats() {
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   
   return (
-    <section className="py-16 lg:py-20 bg-white" ref={sectionRef}>
+    <section className="py-16 lg:py-20 bg-black" ref={sectionRef}>
       <div className="sq-container">
         <motion.p 
-          className="text-center text-xs uppercase tracking-widest text-gray-500 mb-12"
+          className="text-center text-xs uppercase text-white tracking-widest text-gray-500 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -91,17 +91,17 @@ export default function Stats() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light tracking-tight mb-2">
+              <div className=" text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light tracking-tight mb-2">
                 <AnimatedCounter 
                   value={stat.value} 
                   prefix={stat.prefix}
                   suffix={stat.suffix}
                 />
               </div>
-              <p className="text-xs sm:text-sm text-gray-900 font-medium">
+              <p className="text-xs sm:text-sm text-white text-gray-900 font-medium">
                 {stat.label}
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-white">
                 {stat.sublabel}
               </p>
             </motion.div>
