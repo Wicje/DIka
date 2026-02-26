@@ -6,62 +6,42 @@ const heroImages = [
   { 
     src: '/images/hero/hero-1.jpg', 
     alt: 'Overture Haus Website',
-    title: 'Overture Haus',
-    category: 'Creative Agency'
   },
   { 
     src: '/images/hero/hero-2.jpg', 
     alt: 'Basketball Summer Website',
-    title: 'Basketball Summer',
-    category: 'Sports Camp'
   },
   { 
     src: '/images/hero/hero-3.jpg', 
     alt: 'Plants & Co Website',
-    title: 'Plants & Co',
-    category: 'E-commerce'
   },
   { 
     src: '/images/hero/hero-4.jpg', 
     alt: 'Aurum Fashion Website',
-    title: 'Aurum',
-    category: 'Fashion'
   },
   { 
     src: '/images/hero/hero-5.jpg', 
     alt: 'The Daily Grind Website',
-    title: 'The Daily Grind',
-    category: 'Food & Beverage'
   },
   { 
     src: '/images/hero/hero-6.jpg', 
     alt: 'SYNC Dashboard',
-    title: 'SYNC',
-    category: 'SaaS Platform'
   },
   { 
     src: '/images/hero/hero-7.jpg', 
     alt: 'Eternal Vows Photography',
-    title: 'Eternal Vows',
-    category: 'Photography'
   },
   { 
     src: '/images/hero/hero-8.jpg', 
     alt: 'Iron Pump Fitness',
-    title: 'Iron Pump',
-    category: 'Fitness'
   },
   { 
     src: '/images/hero/hero-9.jpg', 
     alt: 'Architectura Firm',
-    title: 'Architectura',
-    category: 'Architecture'
   },
   { 
     src: '/images/hero/hero-10.jpg', 
     alt: 'Sugar & Dough Bakery',
-    title: 'Sugar & Dough',
-    category: 'Bakery'
   },
 ];
 
@@ -89,19 +69,19 @@ export default function Hero() {
     
     if (normalizedDiff === 0) {
       return {
-        transform: 'translateX(0) scale(1)',
+        transform: 'translateX(0) scale(1.1) translateZ(0px)',
         zIndex: 30,
         opacity: 1,
       };
     } else if (normalizedDiff === -1 || normalizedDiff === heroImages.length - 1) {
       return {
-        transform: 'translateX(-60%) scale(0.85) rotateY(15deg)',
+        transform: 'translateX(-100%) scale(0.8) rotateY(20deg) translateZ(-120px)',
         zIndex: 20,
         opacity: 0.6,
       };
     } else if (normalizedDiff === 1 || normalizedDiff === -(heroImages.length - 1)) {
       return {
-        transform: 'translateX(60%) scale(0.85) rotateY(-15deg)',
+        transform: 'translateX(100%) scale(0.8) rotateY(-20deg) translateZ(-120px)',
         zIndex: 20,
         opacity: 0.6,
       };
@@ -128,10 +108,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mb-12 lg:mb-16"
         >
-          <h1 className="sq-font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight tracking-tight mb-6">
-            A website
+          <h1 className="sq-font-serif text-7xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight tracking-tight mb-6">
+            An Architecture
             <br />
-            <span className="italic text-gray-300">makes it real</span>
+            <span className="bold text-gray-300 ">Makes It Real</span>
           </h1>
           
           <motion.div
@@ -140,10 +120,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col items-center gap-4"
           >
-            <a href="#get-started" className="sq-btn-primary">
+            <a href="#get-started" className="sq-btn-primary font-bold py-6 mt-6 text-black ">
               Get Started
             </a>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm-1 text-white-400">
               Start for free. No credit card required.
             </p>
           </motion.div>
@@ -155,15 +135,17 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="relative h-[300px] sm:h-[350px] lg:h-[400px]"
-          style={{ perspective: '1000px' }}
-          onMouseEnter={() => setIsAutoPlaying(false)}
+          style={{ perspective: '1500px' }}
+          onMouseEnter={() => setIsAutoPlaying(true)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-full flex items-center justify-center"
+          style={{ transformStyle: 'preserve-3d' }}
+          >
             {heroImages.map((image, index) => (
               <motion.div
                 key={index}
-                className="absolute w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-lg overflow-hidden shadow-2xl cursor-pointer"
+                className="absolute w-[340px] sm:w-[420px] lg:w-[520px] aspect-[4/3] rounded-lg overflow-hidden shadow-2xl cursor-pointer"
                 initial={false}
                 animate={getSlideStyle(index)}
                 transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}

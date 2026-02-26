@@ -65,7 +65,7 @@ export default function Navigation() {
               >
                 <path d="M16 0L0 8v16l16 8 16-8V8L16 0zm0 4l12 6-12 6-12-6 12-6z"/>
               </svg>
-              <span className="font-semibold text-sm tracking-wider uppercase">Squarespace</span>
+              <span className="font-semibold text-sm tracking-wider uppercase">SQUARESPACES</span>
             </a>
 
             {/* Desktop Navigation */}

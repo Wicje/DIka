@@ -26,8 +26,8 @@
     --color-gray-900: #212121;
     
     /* Typography */
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-sans: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Times New Roman', Georgia, 'Times New Roman', serif;
     
     /* Spacing Scale */
     --space-1: 4px;
