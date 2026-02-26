@@ -96,6 +96,15 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen bg-black text-white overflow-hidden">
+    <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover"
+>
+  <source src="/videos/hero-bg.mp4" type="video/mp4" />
+</video>
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
       
@@ -123,7 +132,7 @@ export default function Hero() {
             <a href="#get-started" className="sq-btn-primary font-bold py-6 mt-6 text-black ">
               Get Started
             </a>
-            <p className="text-sm-1 text-white-400">
+            <p className="text-sm text-white-400">
               Start for free. No credit card required.
             </p>
           </motion.div>
@@ -134,18 +143,18 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="relative h-[300px] sm:h-[350px] lg:h-[400px]"
+          className="relative h-[300px] sm:h-[350px] lg:h-[400px] pt-28"
           style={{ perspective: '1500px' }}
           onMouseEnter={() => setIsAutoPlaying(true)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          <div className="relative w-full h-full flex items-center justify-center"
+          <div className="relative w-full h-full flex items-center justify-center mt-6"
           style={{ transformStyle: 'preserve-3d' }}
           >
             {heroImages.map((image, index) => (
               <motion.div
                 key={index}
-                className="absolute w-[340px] sm:w-[420px] lg:w-[520px] aspect-[4/3] rounded-lg overflow-hidden shadow-2xl cursor-pointer"
+                className="absolute w-[380px] sm:w-[450px] lg:w-[580px] aspect-[4/3] rounded-lg overflow-hidden shadow-2xl cursor-pointer"
                 initial={false}
                 animate={getSlideStyle(index)}
                 transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
@@ -154,7 +163,7 @@ export default function Hero() {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-lg"
                 />
                 {/* Image Info Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
