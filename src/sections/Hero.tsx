@@ -149,12 +149,15 @@ export default function Hero() {
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
           <div className="relative w-full h-full flex items-center justify-center mt-6"
-          style={{ transformStyle: 'preserve-3d' }}
+          style={{ transformStyle: 'preserve-3d'
+            WebkitTransformStyle: 'preserve-3d'
+          }}
           >
             {heroImages.map((image, index) => (
               <motion.div
                 key={index}
-                className="absolute w-[380px] sm:w-[450px] lg:w-[580px] aspect-[4/3] rounded-lg overflow-hidden shadow-2xl cursor-pointer"
+                className="absolute w-[380px] sm:w-[450px] lg:w-[580px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+                style={{ backfaceVisibility: 'hidden' }}
                 initial={false}
                 animate={getSlideStyle(index)}
                 transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
@@ -163,7 +166,7 @@ export default function Hero() {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover "
                 />
                 {/* Image Info Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">

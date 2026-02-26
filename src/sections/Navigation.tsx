@@ -50,7 +50,7 @@ export default function Navigation() {
         transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-sm' 
+            ? 'bg-black/95 backdrop-blur-md shadow-sm' 
             : 'bg-transparent'
         }`}
       >
@@ -65,7 +65,7 @@ export default function Navigation() {
               >
                 <path d="M16 0L0 8v16l16 8 16-8V8L16 0zm0 4l12 6-12 6-12-6 12-6z"/>
               </svg>
-              <span className="font-semibold text-sm tracking-wider uppercase">SQUARESPACES</span>
+              <span className="font-semibold text-xl tracking-wider uppercase text-white-700">DLKA</span>
             </a>
 
             {/* Desktop Navigation */}
@@ -79,7 +79,7 @@ export default function Navigation() {
                 >
                   <a 
                     href={link.href}
-                    className="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors"
+                    className="flex items-center gap-1 text-lg font-medium text-white-500 hover:text-black transition-colors"
                   >
                     {link.label}
                     {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
@@ -114,13 +114,13 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center gap-4">
               <a 
                 href="#login" 
-                className="text-sm font-medium text-gray-700 hover:text-black transition-colors"
+                className="text-sm font-semibold text-white-700 hover:text-black transition-colors"
               >
-                Log In
+                LOG IN
               </a>
               <a 
                 href="#get-started" 
-                className="sq-btn-primary text-xs"
+                className="sq-btn-primary text-sm font-bold py-6 border-none"
               >
                 Get Started
               </a>
