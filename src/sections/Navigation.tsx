@@ -65,7 +65,7 @@ export default function Navigation() {
               >
                 <path d="M16 0L0 8v16l16 8 16-8V8L16 0zm0 4l12 6-12 6-12-6 12-6z"/>
               </svg>
-              <span className="font-semibold text-xl tracking-wider uppercase text-white-700">DLKA</span>
+              <span className="font-semibold text-xl tracking-wider uppercase text-white">DLKA</span>
             </a>
 
             {/* Desktop Navigation */}
@@ -79,7 +79,7 @@ export default function Navigation() {
                 >
                   <a 
                     href={link.href}
-                    className="flex items-center gap-1 text-lg font-medium text-white-500 hover:text-black transition-colors"
+                    className="flex items-center gap-1 text-lg font-medium text-white hover:text-black transition-colors"
                   >
                     {link.label}
                     {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
@@ -114,7 +114,7 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center gap-4">
               <a 
                 href="#login" 
-                className="text-sm font-semibold text-white-700 hover:text-black transition-colors"
+                className="text-sm font-semibold text-white hover:text-black transition-colors"
               >
                 LOG IN
               </a>

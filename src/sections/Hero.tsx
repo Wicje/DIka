@@ -106,7 +106,7 @@ export default function Hero() {
   <source src="/videos/hero-bg.mp4" type="video/mp4" />
 </video>
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/15 to-black" />
       
       {/* Content */}
       <div className="relative z-10 sq-container pt-28 pb-16 lg:pt-32 lg:pb-24">
@@ -129,7 +129,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col items-center gap-4"
           >
-            <a href="#get-started" className="sq-btn-primary font-bold py-6 mt-6 text-black ">
+            <a href="#get-started" className="sq-btn-primary font-bold py-6 mt-6 text-black border-none ">
               Get Started
             </a>
             <p className="text-sm text-white-400">
@@ -149,7 +149,7 @@ export default function Hero() {
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
           <div className="relative w-full h-full flex items-center justify-center mt-6"
-          style={{ transformStyle: 'preserve-3d'
+          style={{ transformStyle: 'preserve-3d',
             WebkitTransformStyle: 'preserve-3d'
           }}
           >
